@@ -1,0 +1,11 @@
+[Unit]
+Description=Forcefully disable GNOME tour
+After=multi-user.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/bin/purge-tour.sh
+RemainAfterExit=true
+
+[Install]
+WantedBy=multi-user.target
